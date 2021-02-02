@@ -32,7 +32,11 @@ i386_init(void)
 	// Initialize the console.
 	// Can't call cprintf until after we do this!
 	cons_init();
-
+	{
+        int x = 1, y = 3, z = 4;
+        Lab1:
+        cprintf("x %d, y %x, z %d\n", x, y, z);
+	}
 	cprintf("6828 decimal is %o octal!\n", 6828);
 
 	// Test the stack backtrace function (lab 1 only)
